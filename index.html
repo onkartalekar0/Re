@@ -18,16 +18,20 @@
     <input id="email" placeholder="Email ID">
 
     <textarea id="objective" placeholder="Career Objective"></textarea>
-    <!-- <textarea id="computer" placeholder="Computer Knowledge (comma separated)"></textarea> -->
-    <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
+    <textarea id="computer" placeholder="Skills (comma separated)"></textarea>
     <textarea id="projects" placeholder="Project Details"></textarea>
     <textarea id="experience" placeholder="Experience"></textarea>
-    
+    <!-- <textarea id="skills" placeholder="Personal Key Skills (comma separated)"></textarea> -->
 
     <h3>Personal Details</h3>
      <input id="father" placeholder="Father Name">
      <input type="date" id="dob" placeholder="Date of Birth">
-    <input id="marital" placeholder="Marital Status">
+<label>Marital Status</label>
+<select id="marital">
+  <option value="">Select</option>
+  <option value="Married">Married</option>
+  <option value="Unmarried">Unmarried</option>
+</select>
     <input id="nationality" placeholder="Nationality">
     <input id="language" placeholder="Languages Known">
 
@@ -46,9 +50,8 @@
     <button class="btn add" onclick="addRow()">Add Row</button>
     <button class="btn generate" onclick="generateResume()">Generate Resume</button>
     <button class="btn pdf" onclick="window.print()">Download PDF</button>
-    <button class="btn clear" type="button" onclick="clearAll()">Clear All</button>
+<button class="btn clear" type="button" onclick="clearAll()">Clear All</button>
 
-    
   </div>
 
   <!-- RESUME -->
@@ -64,11 +67,10 @@
       
     </div>
 
-    <div class="section objective">
-  <h3>CAREER OBJECTIVE</h3>
-  <p id="rObjective"></p>
-</div>
-
+    <div class="section">
+      <h3>CAREER OBJECTIVE</h3>
+      <p id="rObjective"></p>
+    </div>
 
     <div class="section">
       <h3>EDUCATIONAL QUALIFICATION</h3>
@@ -99,7 +101,7 @@
     </div>
 
     <!-- <div class="section">
-      <h3>SKILLS</h3>
+      <h3>PERSONAL KEY SKILLS</h3>
       <ul id="rSkills"></ul>
     </div> -->
 
@@ -115,14 +117,10 @@
       </p>
     </div>
 
-    <div class="section declaration">
-  <h3>DECLARATION</h3>
-  <p>
-    I hereby declare that the above-mentioned information is correct and true to the best 
-    of my knowledge and I bear the responsibility for the correctness of the above-mentioned particulars.
-  </p>
-</div>
-
+    <div class="section">
+      <h3>DECLARATION</h3>
+      <p>I hereby declare that the above information is true to the best of my knowledge.</p>
+    </div>
 
     <!-- RIGHT SIDE SIGNATURE -->
     <div class="signature">
